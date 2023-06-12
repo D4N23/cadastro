@@ -40,3 +40,7 @@ Route::get('/produtos', [ControladorProduto::class, 'index']);
 Route::get('/produtos/novo', [ControladorProduto::class, 'create']);
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
