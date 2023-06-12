@@ -1,5 +1,8 @@
 <?php
 
+use  App\Http\Controllers\ControladorCategoria;
+use  App\Http\Controllers\ControladorProduto;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +20,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/produtos', [ControladorProduto::class, 'index']);
+
+Route::get('/categorias', [ControladorCategoria::class, 'index']);
+
+Route::get('/categorias/novo', [ControladorCategoria::class, 'create']);
+
+Route::post('/categorias', [ControladorCategoria::class, 'store']);
