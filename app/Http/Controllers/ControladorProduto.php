@@ -43,7 +43,7 @@ class ControladorProduto extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
