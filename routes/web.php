@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/produtos', [ControladorProduto::class, 'index']);
 
+//rotas de categorias
 Route::get('/categorias', [ControladorCategoria::class, 'index']);
 
 Route::post('/categorias', [ControladorCategoria::class, 'store']);
@@ -34,5 +34,9 @@ Route::get('/categorias/editar/{id}', [ControladorCategoria::class, 'edit']);
 
 Route::post('/categorias/{id}', [ControladorCategoria::class, 'update']);
 
+//rotas de produtos
+Route::get('/produtos', [ControladorProduto::class, 'index']);
+
+Route::get('/produtos/novo', [ControladorProduto::class, 'create']);
 
 
